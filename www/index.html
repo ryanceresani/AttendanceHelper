@@ -18,8 +18,9 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
-    <script src="controllers/MainController.js"></script>
-    <script src="controllers/GetClassesController.js"></script>
+    <script src="services/GetClasses.js"></script>
+    <script src="controllers/ClassesCtrl.js"></script>
+    <script src="controllers/ClassDetailCtrl.js"></script>
 
     <!-- AngularJS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
@@ -29,19 +30,7 @@
     <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
 
 </head>
-<body ng-app="starter" ng-controller="GetClassesController">
-    <ion-pane>
-        <ion-header-bar class="bar-stable">
-            <h1 class="title">Ionic Blank Starter</h1>
-        </ion-header-bar>
-        <ion-content>
-            <ion-list class="">
-                <ion-item class='item-icon-left' ng-repeat="class in classes" ng-click="changeView(class)">
-                    <i class="icon ion-beer"></i>
-                    {{class.name}}
-                </ion-item>
-            </ion-list>
-        </ion-content>
-    </ion-pane>
+<body ng-app="starter">
+    <ion-nav-view></ion-nav-view>
 </body>
 </html>
