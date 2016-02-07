@@ -3,7 +3,7 @@
 app.factory("api", ["$firebaseArray",
   function ($firebaseArray) {
       var api = {};
-      var ref = new Firebase("https://popping-heat-4617.firebaseio.com/Classes");
+      var ref = new Firebase("https://attendancehelper.firebaseio.com/Classes");
       api.getClasses = function () {
           return $firebaseArray(ref);
       }

@@ -2,11 +2,19 @@
     <ion-nav-bar>
         <ion-nav-back-button class="button-clear" icon="ion-arrow-left-c">
         </ion-nav-back-button>
-        <ion-nav-title>{{class.name}}</ion-nav-title>
+        <ion-nav-title>{{course.name}}</ion-nav-title>
     </ion-nav-bar>
     <ion-content>
-        name:{{class.name}}
+        Time: {{course.timestart}}
         <br />
-        students:{{class.students}}
+        name:{{course.name}}
+        <br />
+        students:{{course.students}}
+        <br />
+        time now: {{hour}}
+        <br />
+        <button class="button button-assertive" ng-disabled="isTime()">
+            Check In
+        </button>
     </ion-content>
 </ion-view>
